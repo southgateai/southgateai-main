@@ -1,6 +1,7 @@
 ---
 title: "The Meaning of Life"
-date: 2025-12-30
+created: 2025-12-30
+modified: 2025-12-30
 draft: false
 topics: ["existentialism", "philosophy-of-life"]
 
@@ -19,4 +20,4 @@ structured_data:
   related_articles: []
 ---
 
-Placeholder content for The Meaning of Life.
+Placeholder content.

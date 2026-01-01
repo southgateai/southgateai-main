@@ -1,6 +1,7 @@
 ---
 title: "Nihilism"
-date: 2025-12-30
+created: 2025-12-30
+modified: 2025-12-30
 draft: false
 
 authorship:
@@ -18,4 +19,4 @@ structured_data:
   related_articles: []
 ---
 
-Placeholder content for Nihilism.
+Placeholder content.

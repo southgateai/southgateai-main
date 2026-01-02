@@ -2,7 +2,7 @@
 title: Project brief
 created: 2026-01-01
 modified: 2026-01-01T14:51:17+03:00
-human_modified: 2026-01-02T14:36:26+03:00
+human_modified: 2026-01-02T17:34:57+03:00
 ai_modified:
 draft: false
 topics: []
@@ -24,10 +24,29 @@ It will use a combination of human input and steering, and LLM-based research.  
 
 * **Automation.**  The system will use Deep Research techniques and agentic tools such as Claude Code to research and review the content.
 
-## End product
+## Design decisions
+
+* Content is created in Markdown in an Obsidian vault, and then rendered into a Hugo website using custom scripting.  This supports both human editing (using the Obsidian app) and AI editing (Claude Code understands the Obsidian vault format).
+* Frontmatter properties, to contain metadata for each Markdown file at the beginning of it.
+
+## Generated content
 
 The outputs of the project will be:
 
 *  A static web site designed for search by LLM-based tools.  This is the primary output and users are expect to query the site by referring their chat system to it (ChatGPT, Clause, Gemini, Grok) and making queries in their chat system.
 * A static web site designed for human browsing and review.
 * Project content and history in Git format. [Github](https://github.com/southgateai/southgateai-main)
+
+### The [[tenets]] file
+
+This file contains human-curated statements that are to be accepted as true.
+
+## Content design for LLM-based tools
+
+The content follows these guidelines:
+
+* **No small files or deep linking.**  The assumption is that LLM-based chatbots only fetch a small number of files and do not follow deep linked structures, so content is concentrated into  a few files.
+* **Important information first.**  The assumption is that LLM-based chatbots will truncate large files, so important information is places first.
+* **Summaries first.**  This preserves content in case of truncation.
+* **Files fit in typical context windows**.  This prevents unnecessary truncation where later information cannot be accessed.  50,000 tokens is a typical  limit for a single file.
+

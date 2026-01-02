@@ -1,0 +1,16 @@
+{
+  "frontmatterProperty": "human_modified",
+  "createdDateProperty": "created",
+  "momentFormat": "",
+  "momentLocale": "",
+  "storeHistoryLog": false,
+  "historyNewestFirst": false,
+  "historyMaxItems": 0,
+  "excludedFolders": [],
+  "useKeyupEvents": false,
+  "onlyUpdateExisting": false,
+  "timeout": 10,
+  "excludeField": "exclude_modified_update",
+  "appendField": "append_modified_update",
+  "appendMaximumFrequency": "day"
+}

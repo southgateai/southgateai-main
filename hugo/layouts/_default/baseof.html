@@ -51,8 +51,9 @@
     <!-- Mermaid.js for diagrams -->
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: false });
         // Hugo renders ```mermaid blocks as <pre><code class="language-mermaid">
-        // Convert these to <div class="mermaid"> for Mermaid.js
+        // Replace <pre> with <div class="mermaid"> for proper rendering
         document.querySelectorAll('code.language-mermaid').forEach(codeBlock => {
             const pre = codeBlock.parentElement;
             const div = document.createElement('div');
@@ -60,7 +61,7 @@
             div.textContent = codeBlock.textContent;
             pre.replaceWith(div);
         });
-        mermaid.initialize({ startOnLoad: true });
+        await mermaid.run();
     </script>
 </body>
 </html>

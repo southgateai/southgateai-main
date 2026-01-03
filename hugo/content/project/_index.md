@@ -8,7 +8,7 @@ concepts: []
 created: 2026-01-03
 date: &id001 2026-01-03
 draft: false
-human_modified: 2026-01-03
+human_modified: 2026-01-03 16:05:09+03:00
 last_curated: null
 modified: *id001
 related_articles:
@@ -17,21 +17,23 @@ title: SouthgateAI Project
 topics: []
 ---
 
-## Overview
-
 SouthgateAI is a philosophical content platform exploring the nature and meaning of life. The project combines human insight with AI-assisted research to build a coherent worldview expressed through structured content.
 
 ## Architecture
 
-The platform operates in dual modes:
+The data flows through these components:
+- **Obsidian vault** - Primary content source (Markdown files with frontmatter)
+- **Python sync tools** - Converts Obsidian wikilinks to Hugo markdown links
+- **Hugo** - Static site generator that builds HTML from content
+- **Netlify** - Hosts the static site
 
-- **Human-browsable** (`/`) - A traditional website built with Hugo and styled with Pico CSS
-- **Machine-readable** (`/api/`) - Structured JSON-LD content optimized for AI chatbots
-
-### Data Flow
-
-```
-Obsidian vault → Python sync tools → Hugo content → Static site (Netlify)
+```mermaid
+flowchart LR
+    A[Obsidian Vault] --> B[Python Sync]
+    B --> C[Hugo Content]
+    C --> D[Hugo Build]
+    D --> E[Static Site]
+    E --> F[Netlify]
 ```
 
 ## Project Structure

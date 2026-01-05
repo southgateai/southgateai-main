@@ -8,11 +8,14 @@ concepts: []
 created: 2026-01-03
 date: &id001 2026-01-03
 draft: false
-human_modified: 2026-01-04 19:24:17+03:00
+human_modified: 2026-01-05 14:16:56+03:00
 last_curated: null
 modified: *id001
 related_articles:
 - '[[project-brief]]'
+- '[[automation]]'
+- '[[todo]]'
+- '[[changelog]]'
 title: The Unfinishable Map Project
 topics: []
 ---
@@ -51,6 +54,9 @@ flowchart LR
 
 - [project-brief](/project/project-brief/) - Project aims, methods, and design decisions
 - [tenets](/tenets/) - Human-curated foundational statements
+- [automation](/project/automation/) - AI automation system for content development
+- [todo](/project/todo/) - Task queue for AI and human work
+- [changelog](/project/changelog/) - Log of all AI activity
 
 ## Contributing
 

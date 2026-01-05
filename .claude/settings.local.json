@@ -5,6 +5,7 @@
   },
   "permissions": {
     "allow": [
+      "WebSearch",
       "Bash(dir \"c:\\\\Users\\\\andy\\\\Documents\\\\sai\\\\southgateai-main\")",
       "Bash(dir:*)",
       "Bash(uv sync:*)",

@@ -1,0 +1,155 @@
+---
+name: refine-draft
+description: Improve the quality of draft content. Runs review and applies improvements while preserving voice.
+---
+
+# Refine Draft
+
+Improve existing draft content through review and targeted improvements.
+
+## When to Use
+
+- When a todo item is type `refine-draft`
+- When `/refine-draft [filepath]` is invoked
+- Weekly draft refinement runs
+
+## Instructions
+
+### 1. Select Draft to Refine
+
+If a specific file is provided, use it.
+
+Otherwise, select using this priority:
+1. Drafts flagged for refinement in todo.md
+2. Oldest draft by `created` date
+3. Drafts with lowest quality scores (if reviewed)
+
+### 2. Run Quality Review
+
+Use the existing review tool:
+```bash
+uv run python scripts/curate.py review [filepath]
+```
+
+This provides:
+- Overall quality score (1-10)
+- Strengths list
+- Improvements list with priorities
+- Missing concepts
+
+### 3. Apply Improvements
+
+Based on the review, make targeted improvements:
+
+#### Clarity
+- Simplify convoluted sentences
+- Define jargon on first use
+- Improve paragraph flow
+
+#### Structure
+- Add missing sections if needed
+- Improve section ordering
+- Add transitions between sections
+
+#### Depth
+- Expand shallow treatments
+- Add examples or analogies
+- Include relevant citations
+
+#### Tenet Alignment
+- Ensure content doesn't contradict tenets
+- Add explicit connections to tenets where natural
+- Address obvious objections
+
+### 4. Preserve Voice
+
+When refining:
+- Keep the original style and approach
+- Don't over-edit - targeted improvements only
+- Preserve unique phrasings that work
+- Maintain the original argument structure unless flawed
+
+### 5. Update Frontmatter
+
+After refinement:
+
+```yaml
+ai_modified: YYYY-MM-DDTHH:MM:SS+00:00  # Update timestamp
+draft: true  # KEEP as draft - human must approve
+```
+
+If the original was human-authored (`ai_contribution: 0`), update to mixed:
+```yaml
+ai_contribution: 20  # Or appropriate percentage based on changes
+```
+
+### 6. Document Changes
+
+Add a comment at the end of the file (to be removed by human):
+
+```markdown
+<!-- AI REFINEMENT LOG - YYYY-MM-DD
+Changes made:
+- [Change 1]
+- [Change 2]
+- [Change 3]
+
+Based on review scoring X/10.
+Key improvements: [summary]
+
+This log should be removed after human review.
+-->
+```
+
+### 7. Update Todo
+
+If this was a todo item, mark it complete.
+
+If significant issues remain, create a new todo:
+```markdown
+### P2: Further refine [filename]
+- **Type**: refine-draft
+- **Status**: pending
+- **Notes**: Initial refinement done but [remaining issues]
+```
+
+### 8. Log to Changelog
+
+Append to `obsidian/project/changelog.md`:
+```markdown
+### HH:MM - refine-draft
+- **Status**: Success
+- **File**: [filepath]
+- **Original score**: X/10
+- **Changes**: [brief list]
+- **Kept as draft**: true (requires human review)
+```
+
+### 9. Commit
+
+Create a git commit with message:
+```
+refine(content): Improve [filename]
+
+Changes:
+- [Change 1]
+- [Change 2]
+
+Draft status retained for human review.
+```
+
+## What NOT to Do
+
+- Don't change the fundamental argument unless it's flawed
+- Don't add unnecessary content to pad length
+- Don't remove content without clear reason
+- Don't change `draft: false` to `draft: true` on published content
+- Don't make stylistic changes just for the sake of change
+
+## Important
+
+- ALWAYS keep `draft: true` status
+- ALWAYS update `ai_modified` timestamp
+- ALWAYS document changes made
+- Preserve the original author's voice
+- Human review is required before publishing

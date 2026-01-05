@@ -114,3 +114,78 @@ Authorship type is derived from `ai_contribution`:
 - **Content links:** Obsidian uses `[[wikilinks]]`, auto-converted to Hugo markdown links during sync
 - **Section index files:** Files named the same as their folder (e.g., `obsidian/project/project.md`) become `_index.md` in Hugo (e.g., `hugo/content/project/_index.md`) and serve as the section landing page
 - **Site index:** `obsidian/index.md` becomes `hugo/content/_index.md` (the site landing page)
+
+## AI Automation System
+
+The project includes scheduled AI automation for content development. All AI-generated content is created as drafts requiring human review.
+
+### Skills (Slash Commands)
+
+| Skill | Purpose | Modifies Content? |
+|-------|---------|-------------------|
+| `/validate-all` | Daily health check: frontmatter, links, orphans | No (reports only) |
+| `/check-tenets` | Verify content aligns with 5 foundational tenets | No (reports only) |
+| `/pessimistic-review` | Find logical gaps, unsupported claims, counterarguments | No (reports only) |
+| `/optimistic-review` | Find strengths, expansion opportunities | No (reports only) |
+| `/research-topic [topic]` | Web research, outputs notes to `project/research/` | No (research notes only) |
+| `/expand-topic [topic]` | Generate new article (always `draft: true`) | Yes (creates drafts) |
+| `/refine-draft [file]` | Improve existing draft content | Yes (keeps as draft) |
+| `/work-todo` | Execute highest priority task from queue | Depends on task |
+
+### Task Queue
+
+Tasks are managed in `obsidian/project/todo.md`:
+- P0 (urgent) → P3 (nice to have)
+- Human prioritizes; AI executes
+- All content changes create drafts
+
+### Changelog
+
+AI activity is logged to `obsidian/project/changelog.md` with:
+- Timestamp, task name, status
+- Duration, cost estimate
+- Output files, commit hash
+
+### Scheduled Runs
+
+**Daily (2 AM):** `/validate-all`
+
+**Weekly:**
+- Mon/Thu: `/work-todo`
+- Tue: `/refine-draft`
+- Wed: crosslink generation
+- Fri: `/pessimistic-review`
+- Sat: `/optimistic-review`
+
+**Monthly:**
+- 1st: Progress report, research gaps
+- 15th: `/check-tenets`
+
+### Running Automation
+
+**Local (Windows):**
+```powershell
+# Daily validation
+.\scripts\scheduled\daily.ps1
+
+# Weekly work
+.\scripts\scheduled\weekly.ps1 -Task work-todo
+
+# Dry run
+.\scripts\scheduled\daily.ps1 -DryRun
+```
+
+**GitHub Actions:**
+- Runs automatically on schedule
+- Manual trigger via Actions tab with task selection
+- Requires `ANTHROPIC_API_KEY` secret
+
+### The Five Tenets
+
+All content must align with these foundational commitments (see `obsidian/tenets/tenets.md`):
+
+1. **Dualism** - Consciousness is not reducible to physical processes
+2. **Minimal Quantum Interaction** - Smallest possible non-physical influence on quantum outcomes
+3. **Bidirectional Interaction** - Consciousness causally influences the physical world
+4. **No Many Worlds** - Reject MWI; indexical identity matters
+5. **Occam's Razor Has Limits** - Simplicity is unreliable with incomplete knowledge

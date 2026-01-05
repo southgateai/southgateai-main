@@ -1,0 +1,211 @@
+# AI Content Automation for SouthgateAI
+#
+# This workflow runs Claude Code to perform automated content tasks.
+# All content changes are created as drafts for human review.
+#
+# Required secrets:
+#   ANTHROPIC_API_KEY - Your Anthropic API key
+#
+# Manual trigger: Use workflow_dispatch to run specific tasks on demand
+
+name: AI Content Automation
+
+on:
+  schedule:
+    # Daily validation at 2 AM UTC
+    - cron: '0 2 * * *'
+    # Weekly work-todo on Monday at 3 AM UTC
+    - cron: '0 3 * * 1'
+    # Weekly work-todo on Thursday at 3 AM UTC
+    - cron: '0 3 * * 4'
+    # Weekly pessimistic review on Friday at 3 AM UTC
+    - cron: '0 3 * * 5'
+    # Weekly optimistic review on Saturday at 3 AM UTC
+    - cron: '0 3 * * 6'
+    # Monthly check-tenets on 15th at 4 AM UTC
+    - cron: '0 4 15 * *'
+    # Monthly progress report on 1st at 4 AM UTC
+    - cron: '0 4 1 * *'
+
+  workflow_dispatch:
+    inputs:
+      task:
+        description: 'Task to run'
+        required: true
+        default: 'validate-all'
+        type: choice
+        options:
+          - validate-all
+          - work-todo
+          - refine-draft
+          - pessimistic-review
+          - optimistic-review
+          - check-tenets
+          - research-topic
+          - crosslink
+      topic:
+        description: 'Topic (for research-topic or expand-topic)'
+        required: false
+        type: string
+      max_turns:
+        description: 'Maximum turns for Claude'
+        required: false
+        default: '15'
+        type: string
+
+env:
+  PYTHON_VERSION: '3.12'
+
+jobs:
+  # Determine which task to run based on schedule or input
+  determine-task:
+    runs-on: ubuntu-latest
+    outputs:
+      task: ${{ steps.set-task.outputs.task }}
+      max_turns: ${{ steps.set-task.outputs.max_turns }}
+    steps:
+      - name: Set task based on trigger
+        id: set-task
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "task=${{ inputs.task }}" >> $GITHUB_OUTPUT
+            echo "max_turns=${{ inputs.max_turns }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "0 2 * * *" ]; then
+            echo "task=validate-all" >> $GITHUB_OUTPUT
+            echo "max_turns=10" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "0 3 * * 1" ]; then
+            echo "task=work-todo" >> $GITHUB_OUTPUT
+            echo "max_turns=20" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "0 3 * * 4" ]; then
+            echo "task=work-todo" >> $GITHUB_OUTPUT
+            echo "max_turns=20" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "0 3 * * 5" ]; then
+            echo "task=pessimistic-review" >> $GITHUB_OUTPUT
+            echo "max_turns=15" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "0 3 * * 6" ]; then
+            echo "task=optimistic-review" >> $GITHUB_OUTPUT
+            echo "max_turns=15" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "0 4 15 * *" ]; then
+            echo "task=check-tenets" >> $GITHUB_OUTPUT
+            echo "max_turns=15" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "0 4 1 * *" ]; then
+            echo "task=progress-report" >> $GITHUB_OUTPUT
+            echo "max_turns=15" >> $GITHUB_OUTPUT
+          else
+            echo "task=validate-all" >> $GITHUB_OUTPUT
+            echo "max_turns=10" >> $GITHUB_OUTPUT
+          fi
+
+  run-task:
+    needs: determine-task
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Add uv to PATH
+        run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Build prompt
+        id: prompt
+        run: |
+          TASK="${{ needs.determine-task.outputs.task }}"
+          TOPIC="${{ inputs.topic }}"
+
+          if [ "$TASK" = "research-topic" ] && [ -n "$TOPIC" ]; then
+            echo "prompt=/research-topic $TOPIC" >> $GITHUB_OUTPUT
+          elif [ "$TASK" = "progress-report" ]; then
+            # Progress report is a special prompt
+            cat << 'EOF' > /tmp/prompt.txt
+          Generate a progress report for the SouthgateAI compendium.
+
+          Analyze:
+          1. Content coverage - what topics/concepts exist vs what's needed
+          2. Draft status - how many drafts await review
+          3. Quality - recent review findings
+          4. Tenet alignment - any concerns
+          5. Next priorities - what should be worked on
+
+          Output to obsidian/project/reviews/progress-report-$(date +%Y-%m-%d).md
+          EOF
+            PROMPT=$(cat /tmp/prompt.txt)
+            echo "prompt<<EOF" >> $GITHUB_OUTPUT
+            echo "$PROMPT" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "prompt=/$TASK" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Determine allowed tools
+        id: tools
+        run: |
+          TASK="${{ needs.determine-task.outputs.task }}"
+          TOOLS="Bash,Read,Glob,Grep,Edit,Write"
+
+          if [ "$TASK" = "work-todo" ] || [ "$TASK" = "research-topic" ]; then
+            TOOLS="$TOOLS,WebSearch"
+          fi
+
+          echo "allowed_tools=$TOOLS" >> $GITHUB_OUTPUT
+
+      - name: Run Claude Code
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: ${{ steps.prompt.outputs.prompt }}
+          allowed_tools: ${{ steps.tools.outputs.allowed_tools }}
+          max_turns: ${{ needs.determine-task.outputs.max_turns }}
+
+      - name: Configure git
+        run: |
+          git config user.name "southgate.ai Agent"
+          git config user.email "agent@southgate.ai"
+
+      - name: Commit and push changes
+        run: |
+          git add -A
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            TASK="${{ needs.determine-task.outputs.task }}"
+            DATE=$(date +%Y-%m-%d)
+
+            git commit -m "chore(auto): $TASK - $DATE
+
+            Automated task run by GitHub Actions.
+            Task: $TASK
+            Triggered by: ${{ github.event_name }}"
+
+            git push
+          fi
+
+      - name: Summary
+        run: |
+          echo "## Task Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Task**: ${{ needs.determine-task.outputs.task }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Max Turns**: ${{ needs.determine-task.outputs.max_turns }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Trigger**: ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ -f obsidian/project/changelog.md ]; then
+            echo "### Recent Changelog" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            tail -30 obsidian/project/changelog.md >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          fi

@@ -26,7 +26,9 @@
       "Bash(git -C \"c:\\\\Users\\\\andy\\\\Documents\\\\sai\\\\southgateai-main\" status --porcelain obsidian/tenets/)",
       "Bash(git -C:*)",
       "Edit(.claude/skills/**)",
-      "Write(.claude/skills/**)"
+      "Write(.claude/skills/**)",
+      "Skill(research-topic)",
+      "Skill(research-topic:*)"
     ]
   }
 }

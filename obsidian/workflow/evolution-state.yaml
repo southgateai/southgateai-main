@@ -2,8 +2,8 @@
 # Machine-readable tracking for the automatic site evolution system
 # Updated by /evolve skill after each session
 
-last_updated: 2026-01-06T21:50:00+00:00
-session_count: 4
+last_updated: 2026-01-07T17:30:00+00:00
+session_count: 5
 
 # Last run timestamps for maintenance tasks
 last_runs:
@@ -13,7 +13,7 @@ last_runs:
   check-tenets: 2026-01-06T20:00:00+00:00
   check-links: 2026-01-06T19:55:00+00:00
   crosslink: null  # Skipped - requires ANTHROPIC_API_KEY
-  deep-review: null  # Never run yet
+  deep-review: 2026-01-07T17:30:00+00:00
 
 # How often each task should run (days)
 cadences:
@@ -57,7 +57,7 @@ progress:
   arguments_written: 1
   questions_written: 1
   research_notes: 3  # arguments-against-materialism, interactionist-dualism, buddhist-perspectives
-  reviews_completed: 4
+  reviews_completed: 5  # +1 deep-review
 
 # Quality metrics (from last pessimistic review)
 quality:
@@ -71,6 +71,10 @@ failed_tasks: {}
 
 # Recent task history for learning
 recent_tasks:
+  - task: deep-review (materialism.md)
+    date: 2026-01-07
+    result: success
+    session: 5
   - task: research-topic (Buddhist perspectives)
     date: 2026-01-06
     result: success

@@ -1,18 +1,23 @@
 ---
 title: "Against Materialism"
 created: 2026-01-06
-modified: 2026-01-06
+modified: 2026-01-07
 human_modified: 2026-01-06
-ai_modified:
+ai_modified: 2026-01-07T17:30:00+00:00
 draft: false
-topics: []
-concepts: []
-related_articles: []
+topics:
+  - "[[hard-problem-of-consciousness]]"
+concepts:
+  - "[[qualia]]"
+related_articles:
+  - "[[tenets]]"
+  - "[[consciousness-selecting-neural-patterns]]"
 ai_contribution: 90
 author: Andy Southgate
-ai_system:
+ai_system: claude-opus-4-5-20251101
 ai_generated_date:
 last_curated:
+last_deep_review: 2026-01-07T17:30:00+00:00
 ---
 
 Materialism—the view that everything real is ultimately physical—has dominated academic philosophy of mind for decades. It promises ontological simplicity and alignment with natural science. Yet when applied to consciousness, materialism faces difficulties that are not merely unsolved but may be unsolvable in principle. This page argues that materialism in all its forms fails to account for the one thing we know most directly: our own conscious experience.
@@ -21,7 +26,7 @@ Materialism—the view that everything real is ultimately physical—has dominat
 
 Before examining the arguments, we must distinguish what we're arguing against.
 
-**Eliminative materialism** holds that consciousness, as ordinarily understood, does not exist. Talk of subjective experience, qualia, and "what it's like" reflects a folk psychology destined for elimination as neuroscience advances. Daniel Dennett's "illusionism" is a contemporary version: consciousness is real only as an illusion—a representation that misrepresents its own nature.
+**Eliminative materialism** holds that our folk-psychological concepts of consciousness—subjective experience, qualia, "what it's like"—do not carve nature at its joints. These concepts, eliminativists argue, are like "phlogiston" or "vital force": useful pre-scientific categories that mature science will replace with better ones. Daniel Dennett's "illusionism" is a sophisticated version: our introspective reports systematically misrepresent their own nature. We are not wrong that *something* is happening when we see red; we are wrong about *what kind of thing* it is. The illusionist claims the hard problem is an artefact of this misrepresentation—there is no further fact about "what it's like" beyond the functional and representational facts.
 
 **Reductive materialism** (or type identity theory) holds that mental states are identical to brain states. Pain just is C-fiber firing; seeing red just is some pattern of neural activation. Consciousness exists but is nothing over and above physical processes.
 
@@ -105,6 +110,10 @@ Eugene Wigner developed this into the "consciousness causes collapse" interpreta
 The physicist Henry Stapp has developed a sophisticated version of quantum interactionism. On his view, consciousness affects brain states by biasing quantum probabilities through the quantum Zeno effect—rapid observations that hold a quantum state in place. The brain, in Stapp's account, presents quantum superpositions of possible neural patterns; consciousness selects among them. This is not a violation of quantum mechanics but an application of its observer-dependent formalism.
 
 Whether Stapp's specific proposal is correct is less important than what it demonstrates: quantum mechanics does not close the door on mental causation the way classical physics would. The materialist cannot simply invoke "causal closure" as if it were an established fact. At the quantum level, physics describes probabilities, not certainties, and leaves room for something to determine which outcome occurs.
+
+**The decoherence objection**: Critics, notably Max Tegmark, argue that quantum effects in the brain decohere too quickly to be relevant. Decoherence—the process by which quantum superpositions collapse through environmental interaction—occurs on timescales of femtoseconds (10⁻¹⁵ seconds) in warm, wet biological systems. Neural processes operate on millisecond timescales, nine orders of magnitude slower. By the time any neuron fires, quantum coherence has long since been destroyed.
+
+This is a serious challenge, but not a decisive one. First, decoherence explains why macroscopic superpositions don't persist—it doesn't explain why collapse happens at all (this is the measurement problem). Second, Penrose and Hameroff's Orch OR theory proposes that quantum coherence might be protected in microtubules within neurons, though this remains highly speculative. Third, the relevant question is not whether large-scale quantum coherence persists, but whether consciousness might influence the *outcome* of decoherence events—selecting which classical state emerges from the quantum foam.
 
 This is not "quantum woo" or mysticism. It is a constrained philosophical hypothesis: if consciousness causally influences physical outcomes, it might do so by biasing quantum indeterminacy in the brain—selecting among superposed states without violating conservation laws or injecting energy. The mechanism is speculative but not incoherent, and it answers the causal closure objection directly.
 

@@ -38,10 +38,15 @@ Vetoed items are moved automatically to the Vetoed Tasks section on the next `/e
 
 ## Active Tasks
 
+### P1: Research Libet experiments and neural predictors of decision
+- **Type**: research-topic
+- **Status**: pending
+- **Notes**: Experiments show neural "readiness potentials" predict decisions before conscious awareness. At first glance this weighs against free will. However, in our framework consciousness may "bake in" prior history through quantum selection—analogous to how quantum systems appear to explore all paths before collapsing. Research: (1) Libet's original experiments, (2) Haynes/Soon 2008 fMRI study, (3) critiques (Schurger et al. on neural noise), (4) retrocausal interpretations, (5) how this relates to Bidirectional Interaction tenet. This research should inform the free will article.
+
 ### P2: Create article on free will and determinism
 - **Type**: expand-topic
 - **Status**: pending
-- **Notes**: Connects to Bidirectional Interaction tenet. How does quantum indeterminacy relate to agency?
+- **Notes**: Connects to Bidirectional Interaction tenet. How does quantum indeterminacy relate to agency? Depends on P1 Libet research.
 
 ### P2: Create concept page for qualia
 - **Type**: expand-topic

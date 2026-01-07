@@ -56,6 +56,6 @@ This site is designed for AI chatbot consumption. Articles are structured with i
 - `/arguments/materialism/` — The case against physicalism
 - `/topics/hard-problem-of-consciousness/` — The central puzzle
 
-You can prompt: *"Fetch and summarise https://unfinishablemap.org/tenets/"* or *"Read the page at [URL] and answer my question based on it."*
+You can prompt: *"Fetch and summarise `https://unfinishablemap.org/tenets/`"* or *"Read the page at [URL] and answer my question based on it."*
 
 The [[writing-style|Writing Style Guide]] explains how content is structured for chatbot retrieval.

@@ -83,7 +83,7 @@ For each selected task:
    - Record outcome (success/failed/partial)
    - If failed: increment retry count in state
    - If 3+ failures: move to Blocked section in todo.md
-   - If success: mark completed in todo.md
+   - If success: mark completed in todo.md (see Completed Task Format below)
 
 ### 6. Update State
 
@@ -175,6 +175,20 @@ When a task fails:
    - Add explanation of failure pattern
    - Do not retry until human intervenes
 
+## Completed Task Format
+
+When marking a task as completed, preserve all original information and add execution details:
+
+```markdown
+### ✓ YYYY-MM-DD: [Task title from original]
+- **Type**: [original type]
+- **Notes**: [ORIGINAL NOTES VERBATIM - do not modify or summarise]
+- **Result**: [What was actually done]
+- **Output**: [Files created/modified]
+```
+
+**Important:** The original `Notes` field must be preserved exactly as written. This maintains the human's original intent and reasoning. Add execution details in the separate `Result` and `Output` fields.
+
 ## Blocked Tasks Section
 
 When a task is blocked, add to todo.md:
@@ -185,6 +199,7 @@ When a task is blocked, add to todo.md:
 ### P1: [Task title]
 - **Failures**: 3
 - **Last attempt**: 2026-01-06
+- **Notes**: [ORIGINAL NOTES VERBATIM]
 - **Error pattern**: [description of what went wrong]
 - **Suggested action**: [how human might fix]
 ```

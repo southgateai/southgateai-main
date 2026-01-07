@@ -68,7 +68,8 @@ The AI has access to these specialized skills:
 | `/research-topic` | Web research on a topic | Research notes |
 | `/expand-topic` | Generate new article | Published article |
 | `/refine-draft` | Improve existing content | Updated content |
-| `/work-todo` | Execute highest priority task | Depends on task |
+| `/deep-review` | Comprehensive single-document review | Updated content + report |
+| `/evolve [mode]` | Main orchestrator for site evolution | Depends on tasks |
 
 ## Multi-Perspective Reviews
 
@@ -120,8 +121,8 @@ The AI picks the highest priority non-blocked task and executes it. All activity
 # Daily validation
 .\scripts\scheduled\daily.ps1
 
-# Execute a todo item
-.\scripts\scheduled\weekly.ps1 -Task work-todo
+# Run evolution session
+.\scripts\scheduled\weekly.ps1 -Task evolve
 
 # Dry run (no changes)
 .\scripts\scheduled\daily.ps1 -DryRun

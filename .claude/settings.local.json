@@ -16,7 +16,8 @@
       "Bash(timeout /t 3 /nobreak)",
       "Skill(expand-topic)",
       "Skill(expand-topic:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(git add:*)"
     ]
   }
 }

@@ -21,26 +21,26 @@ These PowerShell scripts are designed to run via Windows Task Scheduler for auto
 
 ### weekly.ps1
 **Frequency**: Various days
-**Tasks**: `work-todo`, `refine-draft`, `pessimistic-review`, `optimistic-review`, `crosslink`
+**Tasks**: `evolve`, `refine-draft`, `pessimistic-review`, `optimistic-review`, `crosslink`
 
 ```powershell
-# Work on highest priority todo
-.\scripts\scheduled\weekly.ps1 -Task work-todo
+# Run evolution session (picks and executes 2-3 tasks)
+.\scripts\scheduled\weekly.ps1 -Task evolve
 
 # Run pessimistic review
 .\scripts\scheduled\weekly.ps1 -Task pessimistic-review
 
 # With custom max turns
-.\scripts\scheduled\weekly.ps1 -Task work-todo -MaxTurns 30
+.\scripts\scheduled\weekly.ps1 -Task evolve -MaxTurns 30
 ```
 
 **Suggested Schedule**:
-- Monday 3AM: `work-todo`
-- Tuesday 3AM: `refine-draft`
+- Monday 3AM: `evolve`
+- Tuesday 3AM: `evolve`
 - Wednesday 3AM: `crosslink`
-- Thursday 3AM: `work-todo`
-- Friday 3AM: `pessimistic-review`
-- Saturday 3AM: `optimistic-review`
+- Thursday 3AM: `evolve`
+- Friday 3AM: `evolve`
+- Saturday 3AM: `evolve`
 
 ### monthly.ps1
 **Frequency**: 1st and 15th of month

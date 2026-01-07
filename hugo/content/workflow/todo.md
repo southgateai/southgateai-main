@@ -27,7 +27,7 @@ This is the task queue for AI automation. The human reviews and prioritizes task
 - **Veto**: Add `#veto` anywhere in the task heading (e.g., `### P2: Task name #veto`)
 - **Add reason**: Optionally add `- **Veto reason**: [why]` before vetoing
 
-Vetoed items are moved automatically to the Vetoed Tasks section on the next `/work-todo` run.
+Vetoed items are moved automatically to the Vetoed Tasks section on the next `/evolve` run.
 
 ## Priority Levels
 
@@ -38,22 +38,32 @@ Vetoed items are moved automatically to the Vetoed Tasks section on the next `/w
 
 ## Active Tasks
 
-### P3: Create article on free will and determinism
+### P2: Create article on free will and determinism
 - **Type**: expand-topic
 - **Status**: pending
 - **Notes**: Connects to Bidirectional Interaction tenet. How does quantum indeterminacy relate to agency?
 
-### P3: Create concept page for qualia
+### P2: Create concept page for qualia
 - **Type**: expand-topic
 - **Status**: pending
 - **Notes**: Central to the hard problem. Link to Dualism tenet.
 
-### P3: Research Integrated Information Theory (IIT)
+### P2: Research Integrated Information Theory (IIT)
 - **Type**: research-topic
 - **Status**: pending
 - **Notes**: Tononi's theory. How does it relate to or conflict with site tenets?
 
 ## Completed Tasks
+
+### ✓ 2026-01-07: Create concept page for locality
+- **Type**: expand-topic
+- **Result**: Created ~1200 word article addressing locality objection to mind-matter interaction with three main responses
+- **Output**: `concepts/locality.md`
+
+### ✓ 2026-01-07: Create concept page for simulation hypothesis
+- **Type**: expand-topic
+- **Result**: Created ~1400 word article on simulation hypothesis and its implications for site tenets
+- **Output**: `concepts/simulation.md`
 
 ### ✓ 2026-01-06: Research Buddhist perspectives on meaning
 - **Type**: research-topic

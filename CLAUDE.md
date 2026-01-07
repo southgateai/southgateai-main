@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 The Unfinishable Map is a philosophical content platform built with Hugo and Pico CSS.
 
+**Canonical domain:** `unfinishablemap.org` — Use this domain in all site-visible text, links, and references. The site may also appear under other domains (e.g., theunfinishablemap.com, Netlify subdomains) but the canonical domain should always be used in content.
+
 **Data flow:** Obsidian vault → Python sync tools → Hugo content → Static site (Netlify)
 
 ## Commands
@@ -144,7 +146,7 @@ The project includes scheduled AI automation for content development. All AI-gen
 | `/expand-topic [topic]` | Generate new article (always `draft: true`) | Yes (creates drafts) |
 | `/refine-draft [file]` | Improve existing draft content | Yes (keeps as draft) |
 | `/deep-review [file]` | Comprehensive single-document review with improvements | Yes (modifies content) |
-| `/work-todo` | Execute highest priority task from queue | Depends on task |
+| `/evolve [mode]` | Main orchestrator: selects and executes tasks based on priority/staleness | Depends on tasks |
 | `/add-highlight` | Add item to highlights page (max 1/day) | Yes (highlights.md) |
 
 ### Task Queue
@@ -166,11 +168,11 @@ AI activity is logged to `obsidian/workflow/changelog.md` with:
 **Daily (2 AM):** `/validate-all`
 
 **Weekly:**
-- Mon/Thu: `/work-todo`
-- Tue: `/refine-draft`
-- Wed: crosslink generation
-- Fri: `/pessimistic-review`
-- Sat: `/optimistic-review`
+- Mon/Thu: `/evolve` (standard mode - 2-3 tasks)
+- Tue: `/evolve quick` (single task)
+- Wed: `/evolve quick`
+- Fri: `/evolve` (includes pessimistic review if overdue)
+- Sat: `/evolve` (includes optimistic review if overdue)
 
 **Monthly:**
 - 1st: Progress report, research gaps
@@ -183,8 +185,8 @@ AI activity is logged to `obsidian/workflow/changelog.md` with:
 # Daily validation
 .\scripts\scheduled\daily.ps1
 
-# Weekly work
-.\scripts\scheduled\weekly.ps1 -Task work-todo
+# Weekly evolution session
+.\scripts\scheduled\weekly.ps1 -Task evolve
 
 # Dry run
 .\scripts\scheduled\daily.ps1 -DryRun
@@ -261,24 +263,14 @@ overdue_thresholds:
   new-skill: 3  # inject when overdue by N days
 ```
 
-#### 4. Register with /work-todo (if queue task)
-
-If the skill can be invoked from the todo queue, update `.claude/skills/work-todo/SKILL.md`:
-
-1. Add a new section under **Execute Based on Type**:
-   ```markdown
-   #### Type: `new-skill`
-   Run the `/new-skill` skill with the [parameters] from the task.
-   ```
-
-#### 5. Update CLAUDE.md Skills Table
+#### 4. Update CLAUDE.md Skills Table
 
 Add the skill to the **Skills (Slash Commands)** table in this file with:
 - Skill name
 - Purpose description
 - Whether it modifies content
 
-#### 6. Interactive Sessions
+#### 5. Interactive Sessions
 
 **If the session is interactive, ask the user how often the skill should run:**
 - Daily, weekly, monthly, or manual-only?

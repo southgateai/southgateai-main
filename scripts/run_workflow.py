@@ -65,7 +65,7 @@ def main(
 ) -> None:
     """Execute a workflow skill via Claude CLI.
 
-    SKILL is the name of the skill to execute (e.g., 'validate-all', 'work-todo').
+    SKILL is the name of the skill to execute (e.g., 'validate-all', 'evolve').
     """
     console.print(f"[bold]Executing workflow:[/bold] {skill}")
 

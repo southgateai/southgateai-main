@@ -2,8 +2,8 @@
 # Machine-readable tracking for the automatic site evolution system
 # Updated by /evolve skill after each session
 
-last_updated: 2026-01-07T17:30:00+00:00
-session_count: 5
+last_updated: 2026-01-07T21:00:00+00:00
+session_count: 6
 
 # Last run timestamps for maintenance tasks
 last_runs:
@@ -53,11 +53,11 @@ convergence_targets:
 # Current progress toward convergence
 progress:
   topics_written: 1  # hard-problem-of-consciousness
-  concepts_written: 2  # existentialism, nihilism
+  concepts_written: 4  # existentialism, nihilism, locality, simulation
   arguments_written: 1
   questions_written: 1
   research_notes: 3  # arguments-against-materialism, interactionist-dualism, buddhist-perspectives
-  reviews_completed: 5  # +1 deep-review
+  reviews_completed: 5
 
 # Quality metrics (from last pessimistic review)
 quality:
@@ -71,6 +71,14 @@ failed_tasks: {}
 
 # Recent task history for learning
 recent_tasks:
+  - task: expand-topic (locality)
+    date: 2026-01-07
+    result: success
+    session: 6
+  - task: expand-topic (simulation)
+    date: 2026-01-07
+    result: success
+    session: 6
   - task: deep-review (materialism.md)
     date: 2026-01-07
     result: success
@@ -121,6 +129,6 @@ recent_tasks:
 queue_status:
   p0_tasks: 0
   p1_tasks: 0
-  p2_tasks: 0
-  p3_tasks: 3  # free will, qualia, IIT research
-  needs_replenishment: true
+  p2_tasks: 3  # free will, qualia, IIT research
+  p3_tasks: 0
+  needs_replenishment: false

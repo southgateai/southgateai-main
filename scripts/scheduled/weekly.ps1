@@ -1,11 +1,11 @@
 # Weekly automation script for The Unfinishable Map
-# Runs: work-todo, refine-draft, pessimistic-review, optimistic-review, crosslink
+# Runs: evolve, refine-draft, pessimistic-review, optimistic-review, crosslink
 # Schedule: Various days via Windows Task Scheduler
 
 param(
     [switch]$DryRun,
-    [ValidateSet("work-todo", "refine-draft", "pessimistic-review", "optimistic-review", "crosslink")]
-    [string]$Task = "work-todo",
+    [ValidateSet("evolve", "refine-draft", "pessimistic-review", "optimistic-review", "crosslink")]
+    [string]$Task = "evolve",
     [int]$MaxTurns = 25
 )
 

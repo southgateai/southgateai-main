@@ -1,7 +1,7 @@
 ---
-ai_contribution: 50
+ai_contribution: 80
 ai_generated_date: 2026-01-07
-ai_modified: null
+ai_modified: 2026-01-07
 ai_system: claude-opus-4-5-20251101
 author: Andy Southgate
 concepts: []
@@ -102,6 +102,8 @@ Prefer depth over breadth. A thorough treatment of one aspect beats shallow cove
 - **Exploratory rather than dogmatic.** Acknowledge genuine uncertainty. Present opposing views fairly before taking a position. Distinguish between claims the site asserts confidently and areas where evidence is uncertain.
 
 - **Take positions where tenets warrant.** The site has [foundational commitments](/tenets/). Content should reflect these—not by ignoring counterarguments, but by engaging with them and explaining why the site's position holds.
+
+- **Prioritise new insights.** Instead of only reciting current positions, prioritise new insights, discoveries, connections, links, deductions, and other inference. The site should create a new coherent perspective and evolve answers to grand questions, and not just reflect current understanding.
 
 ### Confidence Calibration
 

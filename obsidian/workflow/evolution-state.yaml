@@ -12,17 +12,15 @@ last_runs:
   optimistic-review: 2026-01-05T03:00:00+00:00
   check-tenets: 2026-01-06T20:00:00+00:00
   check-links: 2026-01-06T19:55:00+00:00
-  crosslink: null  # Skipped - requires ANTHROPIC_API_KEY
   deep-review: 2026-01-07T17:30:00+00:00
 
 # How often each task should run (days)
 cadences:
   validate-all: 1
-  pessimistic-review: 7
-  optimistic-review: 7
-  check-tenets: 30
-  check-links: 7
-  crosslink: 7
+  pessimistic-review: 1
+  optimistic-review: 1
+  check-tenets: 7
+  check-links: 1
   deep-review: 1  # Daily comprehensive document review
 
 # Auto-inject as synthetic task when overdue by this many days
@@ -32,7 +30,6 @@ overdue_thresholds:
   optimistic-review: 3
   check-tenets: 5
   check-links: 3
-  crosslink: 3
   deep-review: 2  # Inject when 2 days overdue
 
 # Content statistics (updated each session)
@@ -119,11 +116,6 @@ recent_tasks:
     date: 2026-01-06
     result: success
     session: 3
-  - task: crosslink
-    date: 2026-01-06
-    result: skipped
-    session: 3
-    note: requires ANTHROPIC_API_KEY
   - task: check-links
     date: 2026-01-06
     result: success

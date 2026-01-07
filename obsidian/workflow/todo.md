@@ -42,6 +42,61 @@ Vetoed items are moved automatically to the Vetoed Tasks section on the next `/e
 - **Status**: pending
 - **Notes**: Connects to Bidirectional Interaction tenet. How does quantum indeterminacy relate to agency? Depends on P1 Libet research.
 
+### P1: Research major theories of the meaning of life
+- **Type**: research-topic
+- **Status**: pending
+- **Notes**: Survey existentialist, nihilist, religious, and humanist perspectives on life's meaning. Identify how each aligns or conflicts with the site's tenets (e.g. Nihilism vs. an Intrinsic Meaning tenet). Results will inform the subsequent meaning-of-life article.
+
+### P2: Write article on the meaning of life
+- **Type**: expand-topic
+- **Status**: pending
+- **Notes**: Synthesize findings from P1 meaning-of-life research into a comprehensive draft. Address how various perspectives (existentialist, nihilist, spiritual) are reconciled or refuted by the site's philosophy. Emphasize the site's stance on whether life has inherent purpose. Depends on P1 meaning-of-life research.
+
+### P1: Research panpsychism in consciousness studies
+- **Type**: research-topic
+- **Status**: pending
+- **Notes**: Investigate panpsychism (the view that consciousness is a fundamental feature of all matter). Gather key arguments from proponents (Strawson, Goff) and how panpsychism attempts to solve the mind-matter problem. Analyze points of alignment or conflict with the site's dualist and interactionist tenets.
+
+### P2: Write article on panpsychism vs. site perspective
+- **Type**: expand-topic
+- **Status**: pending
+- **Notes**: Compare and contrast panpsychism with the site's philosophy. Explain panpsychist principles and evaluate whether treating consciousness as inherent in all matter challenges or complements the site's view (e.g. does panpsychism reinforce Bidirectional Interaction, or render it moot?). Depends on P1 panpsychism research.
+
+### P1: Research analytic idealism and mind-centric metaphysics
+- **Type**: research-topic
+- **Status**: pending
+- **Notes**: Examine idealist philosophies (e.g. Berkeley's immaterialism, Kastrup's analytic idealism) where consciousness is primary and matter is derivative. Summarize core arguments that "all is mind" and gather critiques. Note overlaps with the site's perspective (mind as fundamental) and differences (idealism dismisses a physical realm, unlike dualism).
+
+### P2: Write article evaluating idealism vs. the site's dualism
+- **Type**: expand-topic
+- **Status**: pending
+- **Notes**: Critically assess how the site's dualist tenets stack up against a pure idealist viewpoint. Discuss whether the existence of an independent physical world (as the site assumes) is necessary, or if the idealist model could explain observed reality and still accommodate Bidirectional Interaction. Highlight why the site adopts dualism over idealism. Depends on P1 analytic idealism research.
+
+### P2: Analyze content coverage and propose new topics
+- **Type**: other
+- **Status**: pending
+- **Notes**: Review the current scope of topics and concepts to identify gaps in the Unfinishable Map. Compile a brief report suggesting 5–10 new questions or subjects worth exploring (e.g. physicalism's critique, Eastern philosophy angles on mind, ethics of consciousness research). The goal is to ensure the map continually expands into relevant areas not yet covered.
+
+### P1: Research prospects for AI or machine consciousness
+- **Type**: research-topic
+- **Status**: pending
+- **Notes**: Investigate the debate on whether an artificial intelligence could ever be truly conscious. Cover key viewpoints: functionalist arguments for digital consciousness, Searle's critiques (Chinese Room), recent claims about large language models, etc. Evaluate what each position implies given the site's stance that mind may have non-material aspects.
+
+### P2: Write article on AI consciousness from a dualist perspective
+- **Type**: expand-topic
+- **Status**: pending
+- **Notes**: Using insights from the AI consciousness research, discuss if and how a machine might possess awareness. Outline the site's likely perspective (e.g. true consciousness might require non-physical properties absent in AI) and address opposing views. Tie the discussion to site tenets (what would an AI mean for Dualism or Bidirectional Interaction?). Depends on P1 AI consciousness research.
+
+### P2: Deep review the foundational tenets document
+- **Type**: deep-review
+- **Status**: pending
+- **Notes**: Perform a comprehensive audit of the site's Tenets page. Use the deep-review process (combined pessimistic and optimistic analysis) to identify any logical gaps, unclear rationale, or unsupported claims in each tenet. Apply revisions to fortify each principle against criticism, add cross-references or examples as needed, and ensure the tenets are coherent as a set.
+
+### P2: Add "Further Reading" section to the Hard Problem of Consciousness article
+- **Type**: refine-draft
+- **Status**: pending
+- **Notes**: Augment the existing Hard Problem of Consciousness page with a short list of recommended external resources for deeper exploration. For example, link to the Stanford Encyclopedia of Philosophy entry on consciousness, key papers by Chalmers or Nagel, and other relevant readings. This helps situate the site's content in the broader scholarly context for interested readers.
+
 ## Completed Tasks
 
 ### ✓ 2026-01-07: Create concept page on retrocausality and consciousness

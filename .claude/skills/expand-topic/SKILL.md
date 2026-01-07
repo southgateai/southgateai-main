@@ -96,20 +96,13 @@ last_curated:
 [If based on research, cite sources]
 ```
 
-### 6. Run Crosslink Generation
-
-After creating the file:
-```bash
-uv run python scripts/curate.py crosslink hugo/content/ --apply
-```
-
-### 7. Update Todo
+### 6. Update Todo
 
 If this was a todo item:
 1. Mark the task as complete
 2. Note the output file
 
-### 8. Log to Changelog
+### 7. Log to Changelog
 
 Append to `obsidian/workflow/changelog.md`:
 ```markdown
@@ -120,7 +113,7 @@ Append to `obsidian/workflow/changelog.md`:
 - **Based on research**: [yes/no, link if yes]
 ```
 
-### 9. Commit
+### 8. Commit
 
 Create a git commit with message:
 ```

@@ -21,7 +21,7 @@ These PowerShell scripts are designed to run via Windows Task Scheduler for auto
 
 ### weekly.ps1
 **Frequency**: Various days
-**Tasks**: `evolve`, `refine-draft`, `pessimistic-review`, `optimistic-review`, `crosslink`
+**Tasks**: `evolve`, `refine-draft`, `pessimistic-review`, `optimistic-review`
 
 ```powershell
 # Run evolution session (picks and executes 2-3 tasks)
@@ -37,7 +37,7 @@ These PowerShell scripts are designed to run via Windows Task Scheduler for auto
 **Suggested Schedule**:
 - Monday 3AM: `evolve`
 - Tuesday 3AM: `evolve`
-- Wednesday 3AM: `crosslink`
+- Wednesday 3AM: `evolve`
 - Thursday 3AM: `evolve`
 - Friday 3AM: `evolve`
 - Saturday 3AM: `evolve`

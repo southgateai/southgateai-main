@@ -78,7 +78,6 @@ def get_overdue_tasks(
         "optimistic-review",
         "check-tenets",
         "check-links",
-        "crosslink",
         "deep-review",
     ]
 
@@ -124,7 +123,6 @@ def get_status_report(state: EvolutionState, now: Optional[datetime] = None) -> 
         "optimistic-review",
         "check-tenets",
         "check-links",
-        "crosslink",
         "deep-review",
     ]
 

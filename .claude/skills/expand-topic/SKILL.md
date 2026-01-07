@@ -17,7 +17,7 @@ Generate a new article on a philosophical topic.
 
 ### 1. Check for Research
 
-Look in `obsidian/workflow/research/` for existing research on this topic.
+Look in `obsidian/research/` for existing research on this topic.
 
 If no research exists:
 - For simple topics, proceed with general knowledge

@@ -3,7 +3,7 @@ title: AI Task Queue
 created: 2026-01-05
 modified: 2026-01-05
 human_modified: 2026-01-06T15:29:26+00:00
-ai_modified: 2026-01-07T22:45:00+00:00
+ai_modified: 2026-01-07T23:00:00+00:00
 draft: false
 topics: []
 concepts: []
@@ -48,7 +48,7 @@ Vetoed items are moved automatically to the Vetoed Tasks section on the next `/e
 - **Type**: research-topic
 - **Notes**: Tononi's theory. How does it relate to or conflict with site tenets?
 - **Result**: Comprehensive research on IIT 4.0, axioms/postulates, phi metric, panpsychism implications, 2023 pseudoscience controversy, Templeton empirical tests. Analysis of alignment/conflict with site tenets.
-- **Output**: `workflow/research/integrated-information-theory-2026-01-07.md`
+- **Output**: `research/integrated-information-theory-2026-01-07.md`
 
 ### ✓ 2026-01-07: Create concept page for qualia
 - **Type**: expand-topic
@@ -60,7 +60,7 @@ Vetoed items are moved automatically to the Vetoed Tasks section on the next `/e
 - **Type**: research-topic
 - **Notes**: Experiments show neural "readiness potentials" predict decisions before conscious awareness. At first glance this weighs against free will. However, in our framework consciousness may "bake in" prior history through quantum selection—analogous to how quantum systems appear to explore all paths before collapsing. Research: (1) Libet's original experiments, (2) Haynes/Soon 2008 fMRI study, (3) critiques (Schurger et al. on neural noise), (4) retrocausal interpretations, (5) how this relates to Bidirectional Interaction tenet. This research should inform the free will article.
 - **Result**: Comprehensive research covering Libet 1983, Soon et al. 2008, Schurger neural noise critique, retrocausality in QM, Wheeler's delayed-choice, Cramer's transactional interpretation. Key finding: retrocausal interpretation aligns with Bidirectional Interaction tenet.
-- **Output**: `workflow/research/libet-experiments-free-will-2026-01-07.md`
+- **Output**: `research/libet-experiments-free-will-2026-01-07.md`
 
 ### ✓ 2026-01-07: Create concept page for locality
 - **Type**: expand-topic
@@ -75,7 +75,7 @@ Vetoed items are moved automatically to the Vetoed Tasks section on the next `/e
 ### ✓ 2026-01-06: Research Buddhist perspectives on meaning
 - **Type**: research-topic
 - **Result**: Comprehensive research on Four Noble Truths, anattā (no-self), Buddhist ethics, and comparison with site tenets
-- **Output**: `workflow/research/buddhist-perspectives-meaning-2026-01-06.md`
+- **Output**: `research/buddhist-perspectives-meaning-2026-01-06.md`
 
 ### ✓ 2026-01-06: Write article on the hard problem of consciousness
 - **Type**: expand-topic
@@ -85,7 +85,7 @@ Vetoed items are moved automatically to the Vetoed Tasks section on the next `/e
 ### ✓ 2026-01-06: Research interactionist dualism
 - **Type**: research-topic
 - **Result**: Comprehensive research on Stapp's quantum Zeno approach, Penrose-Hameroff Orch OR, causal closure responses
-- **Output**: `workflow/research/interactionist-dualism-2026-01-06.md`
+- **Output**: `research/interactionist-dualism-2026-01-06.md`
 
 ### ✓ 2026-01-06: Expand existentialism concept
 - **Type**: expand-topic

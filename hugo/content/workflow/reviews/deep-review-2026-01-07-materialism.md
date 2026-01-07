@@ -65,12 +65,12 @@ None identified.
 ### Cross-links Added
 
 - `[hard-problem-of-consciousness](/topics/hard-problem-of-consciousness/)` (topic)
-- `[qualia](/qualia/)` (concept - pending creation)
+- `[qualia](/concepts/qualia/)` (concept - pending creation)
 - `[tenets](/tenets/)` (related article)
 - `[consciousness-selecting-neural-patterns](/questions/consciousness-selecting-neural-patterns/)` (related question)
 
 ## Remaining Items
 
-- The `[qualia](/qualia/)` concept page doesn't exist yet (P2 task in queue)
+- The `[qualia](/concepts/qualia/)` concept page doesn't exist yet (P2 task in queue)
 - Could benefit from a "References" section with academic citations (Chalmers 1996, Dennett 1991, Tegmark 2000, Stapp 2007)
 - Buddhist/no-self perspective not addressed (tangential to main argument)

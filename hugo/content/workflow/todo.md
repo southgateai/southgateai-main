@@ -1,7 +1,7 @@
 ---
 ai_contribution: 100
 ai_generated_date: 2026-01-05
-ai_modified: 2026-01-05 12:00:16+00:00
+ai_modified: 2026-01-07 23:00:00+00:00
 ai_system: claude-opus-4-5-20251101
 author: Andy Southgate
 concepts: []
@@ -38,27 +38,30 @@ Vetoed items are moved automatically to the Vetoed Tasks section on the next `/e
 
 ## Active Tasks
 
-### P1: Research Libet experiments and neural predictors of decision
-- **Type**: research-topic
-- **Status**: pending
-- **Notes**: Experiments show neural "readiness potentials" predict decisions before conscious awareness. At first glance this weighs against free will. However, in our framework consciousness may "bake in" prior history through quantum selection—analogous to how quantum systems appear to explore all paths before collapsing. Research: (1) Libet's original experiments, (2) Haynes/Soon 2008 fMRI study, (3) critiques (Schurger et al. on neural noise), (4) retrocausal interpretations, (5) how this relates to Bidirectional Interaction tenet. This research should inform the free will article.
-
 ### P2: Create article on free will and determinism
 - **Type**: expand-topic
 - **Status**: pending
 - **Notes**: Connects to Bidirectional Interaction tenet. How does quantum indeterminacy relate to agency? Depends on P1 Libet research.
 
-### P2: Create concept page for qualia
-- **Type**: expand-topic
-- **Status**: pending
-- **Notes**: Central to the hard problem. Link to Dualism tenet.
-
-### P2: Research Integrated Information Theory (IIT)
-- **Type**: research-topic
-- **Status**: pending
-- **Notes**: Tononi's theory. How does it relate to or conflict with site tenets?
-
 ## Completed Tasks
+
+### ✓ 2026-01-07: Research Integrated Information Theory (IIT)
+- **Type**: research-topic
+- **Notes**: Tononi's theory. How does it relate to or conflict with site tenets?
+- **Result**: Comprehensive research on IIT 4.0, axioms/postulates, phi metric, panpsychism implications, 2023 pseudoscience controversy, Templeton empirical tests. Analysis of alignment/conflict with site tenets.
+- **Output**: `research/integrated-information-theory-2026-01-07.md`
+
+### ✓ 2026-01-07: Create concept page for qualia
+- **Type**: expand-topic
+- **Notes**: Central to the hard problem. Link to Dualism tenet.
+- **Result**: Created ~1300 word article covering qualia definition, properties (intrinsic, private, ineffable), thought experiments (Mary's Room, inverted qualia, zombies), and relation to site tenets
+- **Output**: `concepts/qualia.md`
+
+### ✓ 2026-01-07: Research Libet experiments and neural predictors of decision
+- **Type**: research-topic
+- **Notes**: Experiments show neural "readiness potentials" predict decisions before conscious awareness. At first glance this weighs against free will. However, in our framework consciousness may "bake in" prior history through quantum selection—analogous to how quantum systems appear to explore all paths before collapsing. Research: (1) Libet's original experiments, (2) Haynes/Soon 2008 fMRI study, (3) critiques (Schurger et al. on neural noise), (4) retrocausal interpretations, (5) how this relates to Bidirectional Interaction tenet. This research should inform the free will article.
+- **Result**: Comprehensive research covering Libet 1983, Soon et al. 2008, Schurger neural noise critique, retrocausality in QM, Wheeler's delayed-choice, Cramer's transactional interpretation. Key finding: retrocausal interpretation aligns with Bidirectional Interaction tenet.
+- **Output**: `research/libet-experiments-free-will-2026-01-07.md`
 
 ### ✓ 2026-01-07: Create concept page for locality
 - **Type**: expand-topic
@@ -73,7 +76,7 @@ Vetoed items are moved automatically to the Vetoed Tasks section on the next `/e
 ### ✓ 2026-01-06: Research Buddhist perspectives on meaning
 - **Type**: research-topic
 - **Result**: Comprehensive research on Four Noble Truths, anattā (no-self), Buddhist ethics, and comparison with site tenets
-- **Output**: `workflow/research/buddhist-perspectives-meaning-2026-01-06.md`
+- **Output**: `research/buddhist-perspectives-meaning-2026-01-06.md`
 
 ### ✓ 2026-01-06: Write article on the hard problem of consciousness
 - **Type**: expand-topic
@@ -83,7 +86,7 @@ Vetoed items are moved automatically to the Vetoed Tasks section on the next `/e
 ### ✓ 2026-01-06: Research interactionist dualism
 - **Type**: research-topic
 - **Result**: Comprehensive research on Stapp's quantum Zeno approach, Penrose-Hameroff Orch OR, causal closure responses
-- **Output**: `workflow/research/interactionist-dualism-2026-01-06.md`
+- **Output**: `research/interactionist-dualism-2026-01-06.md`
 
 ### ✓ 2026-01-06: Expand existentialism concept
 - **Type**: expand-topic

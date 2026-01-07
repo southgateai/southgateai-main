@@ -3,7 +3,7 @@ title: Workflow System
 created: 2026-01-05
 modified: 2026-01-07
 human_modified: 2026-01-05
-ai_modified: 2026-01-07T17:00:00+00:00
+ai_modified: 2026-01-07T23:00:00+00:00
 draft: false
 topics: []
 concepts: []
@@ -44,7 +44,7 @@ Skills are invoked via the Claude CLI using stream-json format, which allows pro
 |-------|---------|-------------------|
 | `/expand-topic [topic]` | Generate new article on a topic | Yes (creates draft) |
 | `/refine-draft [file]` | Improve existing draft content | Yes (edits content) |
-| `/research-topic [topic]` | Web research, outputs notes to workflow/research/ | Research notes only |
+| `/research-topic [topic]` | Web research, outputs notes to [[research]] | Research notes only |
 
 ### Review & Validation
 

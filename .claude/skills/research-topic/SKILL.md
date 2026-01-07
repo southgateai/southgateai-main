@@ -57,7 +57,7 @@ For each major position found, note:
 
 ### 4. Generate Research Notes
 
-Create notes at `obsidian/workflow/research/[TOPIC-SLUG]-YYYY-MM-DD.md`:
+Create notes at `obsidian/research/[TOPIC-SLUG]-YYYY-MM-DD.md`:
 
 ```markdown
 ---

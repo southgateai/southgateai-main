@@ -39,9 +39,10 @@ uv run python scripts/commit_obsidian.py
 obsidian/           # Primary content source (Obsidian vault)
 ├── topics/         # Philosophical topics
 ├── concepts/       # Core concepts
+├── research/       # AI research notes (public)
 ├── templates/      # Obsidian templates
 ├── project/        # Project documentation
-└── workflow/       # AI automation (todo, changelog, reviews, research)
+└── workflow/       # AI automation (todo, changelog, reviews)
 
 hugo/               # Static site generator
 ├── content/        # Synced from Obsidian

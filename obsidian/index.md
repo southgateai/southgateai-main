@@ -3,7 +3,7 @@ title: "The Unfinishable Map"
 created: 2026-01-01
 modified: 2026-01-03
 human_modified: 2026-01-03
-ai_modified: 2026-01-07T12:00:00+00:00
+ai_modified: 2026-01-07T23:00:00+00:00
 draft: false
 topics: []
 concepts: []
@@ -29,6 +29,7 @@ A project to build a coherent worldview about consciousness, meaning, and what i
 - **[[arguments|Arguments]]** - Arguments against competing views
 - **[[topics|Topics]]** - Deep dives into philosophical questions
 - **[[concepts|Concepts]]** - Core ideas and frameworks
+- **[[research|Research]]** - AI research notes with sources and analysis
 - **[[project|Project]]** - About this project and how it works
 - **[[workflow|Workflow]]** - AI automation system and evolution tracking
 

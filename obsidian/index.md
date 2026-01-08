@@ -29,7 +29,7 @@ A project to build a coherent worldview about consciousness, meaning, and what i
 - **[[arguments|Arguments]]** - Arguments against competing views
 - **[[topics|Topics]]** - Deep dives into philosophical questions
 - **[[concepts|Concepts]]** - Core ideas and frameworks
-- **[[voids|Voids]]** - The unexplored, unexplorable, and forbidden
+- **[[voids|Voids]]** - The unexplored, unexplorable, and occluded
 - **[[research|Research]]** - AI research notes with sources and analysis
 - **[[project|Project]]** - About this project and how it works
 - **[[workflow|Workflow]]** - AI automation system and evolution tracking

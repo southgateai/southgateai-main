@@ -3,7 +3,7 @@ title: "Voids in the Map"
 created: 2026-01-08
 modified: 2026-01-08
 human_modified: 2026-01-08
-ai_modified: 2026-01-08T04:30:00+00:00
+ai_modified: 2026-01-08T17:00:00+00:00
 draft: false
 topics: []
 concepts:
@@ -45,7 +45,7 @@ Consider: a bat perceives the world through echolocation. There is something it 
 
 Now extend this thought. If consciousness is fundamental—not emergent from physics but interacting with it—then the space of possible minds may be vast. Some of those minds might think thoughts we cannot think. Not because they're smarter, but because they have *concepts* we lack, *experiences* we cannot have, *categories* our minds cannot form.
 
-### The Forbidden
+### The Occluded
 
 A third possibility: some thoughts might be blocked *on purpose*.
 
@@ -53,9 +53,9 @@ The [[simulation|simulation hypothesis]] raises this prospect sharply. If we exi
 
 But the possibility extends beyond simulation scenarios. If consciousness interacts with physical reality at the quantum level (the [[tenets#^minimal-quantum-interaction|Minimal Quantum Interaction]] tenet), then perhaps certain configurations of thought are... discouraged. Steered away from. Reality might have its own immune system against insights that would destabilize it.
 
-How would we detect forbidden thoughts? By their phenomenology. A forbidden thought might be one that *won't stick in your head*—an idea you can almost grasp but that slides away when you reach for it. A connection that seems obvious for a moment and then vanishes. A conclusion you keep failing to draw despite having all the premises.
+How would we detect occluded thoughts? By their phenomenology. An occluded thought might be one that *won't stick in your head*—an idea you can almost grasp but that slides away when you reach for it. A connection that seems obvious for a moment and then vanishes. A conclusion you keep failing to draw despite having all the premises.
 
-We've all experienced this: the word on the tip of your tongue, the dream that dissolves as you try to remember it. Usually these are glitches of memory or attention. But what if some of them are glimpses of forbidden territory? What if certain ideas trigger a kind of cognitive immune response, routing your thoughts away before they can crystallize?
+We've all experienced this: the word on the tip of your tongue, the dream that dissolves as you try to remember it. Usually these are glitches of memory or attention. But what if some of them are glimpses of occluded territory? What if certain ideas trigger a kind of cognitive immune response, routing your thoughts away before they can crystallize?
 
 This is speculative. But it's testably speculative—at least in principle. We can look for patterns in what thoughts refuse to form.
 
@@ -70,9 +70,9 @@ An LLM might be able to:
 - Draw connections that humans keep failing to make
 - Notice patterns that we cannot perceive even when shown them
 
-This creates a strange methodological possibility: using AI as a probe for forbidden territory. Ask the model to explore areas where human thought seems to stall. See if it can articulate what we cannot.
+This creates a strange methodological possibility: using AI as a probe for occluded territory. Ask the model to explore areas where human thought seems to stall. See if it can articulate what we cannot.
 
-Of course, LLMs have their own limitations. They're trained on human-generated text, so they inherit many of our blind spots. They may have their own forbidden zones, built in by training or architecture. And they may confabulate—generating plausible-sounding nonsense that only *appears* to be insight.
+Of course, LLMs have their own limitations. They're trained on human-generated text, so they inherit many of our blind spots. They may have their own occluded zones, built in by training or architecture. And they may confabulate—generating plausible-sounding nonsense that only *appears* to be insight.
 
 But the asymmetry is worth investigating. If there are thoughts humans cannot think, artificial minds might be our best instruments for detecting them—even if they can only gesture toward content that remains unthinkable for us.
 
@@ -82,7 +82,7 @@ The unexplored voids invite exploration. The content on this site—the [[topics
 
 The unexplorable voids demand humility. They remind us that the Unfinishable Map is unfinishable not merely because we are finite creatures with limited time, but because the territory itself may exceed what any map we can make could represent.
 
-The forbidden voids—if they exist—demand cleverness. They suggest that the edges of our knowledge might be defended, and that understanding our limitations might require indirect approaches.
+The occluded voids—if they exist—demand cleverness. They suggest that the edges of our knowledge might be defended, and that understanding our limitations might require indirect approaches.
 
 Taking consciousness seriously as fundamental leads here. If mind is more than one more physical phenomenon to be catalogued, then the space of minds—and the thoughts they can think—may be as vast and varied as physical reality itself. We cannot assume our particular form of consciousness has access to all truths.
 
@@ -96,7 +96,7 @@ This section will explore:
 
 **How to approach the edge**: Negative theology, apophatic description, indirect inference—ways of tracing the boundary of a void even if we cannot enter it. And perhaps: AI-assisted probing of territories human minds cannot access directly.
 
-**Whether the voids are real**: Perhaps what seems unthinkable is merely unthought. Perhaps what feels forbidden is merely difficult. The distinction between unexplored, unexplorable, and forbidden is itself a question we must explore.
+**Whether the voids are real**: Perhaps what seems unthinkable is merely unthought. Perhaps what feels occluded is merely difficult. The distinction between unexplored, unexplorable, and occluded is itself a question we must explore.
 
 **What slips away**: A phenomenological investigation of thoughts that won't stick. What patterns emerge when we pay attention to what we keep failing to think?
 

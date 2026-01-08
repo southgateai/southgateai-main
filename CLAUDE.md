@@ -122,6 +122,7 @@ Key principles:
 - **Named-anchor summaries**: When forward-referencing concepts, use "explained below" pattern with section anchors.
 - **Selective background**: Include background only when framed for the site's dualist perspective. Skip what LLMs already know.
 - **Tenet alignment**: Every article must connect to tenets explicitly via "Relation to Site Perspective" section.
+- **Avoid LLM clichés**: Do not use the "This is not X. It is Y." construct—it has become an overused LLM pattern that grates on readers. Rephrase to make the positive claim directly or integrate the contrast more naturally.
 
 ## Code Conventions
 

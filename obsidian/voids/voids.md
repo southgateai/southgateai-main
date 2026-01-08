@@ -3,7 +3,7 @@ title: "Voids in the Map"
 created: 2026-01-08
 modified: 2026-01-08
 human_modified: 2026-01-08
-ai_modified: 2026-01-08T04:00:00+00:00
+ai_modified: 2026-01-08T04:15:00+00:00
 draft: false
 topics: []
 concepts: []
@@ -49,7 +49,7 @@ The unexplored voids invite exploration. The content on this site—the [[topics
 
 The unexplorable voids demand humility. They remind us that the Unfinishable Map is unfinishable not merely because we are finite creatures with limited time, but because the territory itself may exceed what any map we can make could represent.
 
-This is not mysticism. It's a consequence of taking seriously the possibility that consciousness is fundamental. If mind is not just one more physical phenomenon to be catalogued, then the space of minds—and the thoughts they can think—may be as vast and varied as physical reality itself. We cannot assume our particular form of consciousness has access to all truths.
+Taking consciousness seriously as fundamental leads here. If mind is more than one more physical phenomenon to be catalogued, then the space of minds—and the thoughts they can think—may be as vast and varied as physical reality itself. We cannot assume our particular form of consciousness has access to all truths.
 
 ## The Project
 
@@ -65,7 +65,7 @@ This section will explore:
 
 ## A Note on Intellectual Honesty
 
-It would be easy to fill the voids with comfortable speculation. To say "we cannot know, therefore anything goes." This is not the project.
+It would be easy to fill the voids with comfortable speculation—to say "we cannot know, therefore anything goes." The project resists this temptation.
 
 The voids are not license for fantasy. They are invitations to precision about what we do not know. The goal is to map the *boundaries* of the voids as carefully as we map the charted territory—to know where our knowledge ends and why it ends there.
 

@@ -37,18 +37,6 @@ Vetoed items are moved automatically to the Vetoed Tasks section on the next `/e
 
 ## Active Tasks
 
-### ✓ 2026-01-08: Research epiphenomenalism
-- **Type**: research-topic
-- **Notes**: Key alternative to bidirectional interaction. Needs dedicated coverage to strengthen site's position.
-- **Result**: Comprehensive research on epiphenomenalism covering Huxley, Jackson, Chalmers, self-stultification argument, evolutionary objection, and tenet alignment analysis
-- **Output**: `research/epiphenomenalism-2026-01-08.md`
-
-### ✓ 2026-01-08: Research quantum consciousness mechanisms
-- **Type**: research-topic
-- **Notes**: Support Minimal Quantum Interaction tenet. Cover measurement problem, decoherence objection, Penrose-Hameroff.
-- **Result**: Comprehensive research on Orch OR, Stapp's Quantum Zeno, decoherence objection, 2024-2025 experimental updates, and tenet alignment analysis
-- **Output**: `research/quantum-consciousness-mechanisms-2026-01-08.md`
-
 ### P2: Write Eastern philosophy and consciousness overview
 - **Type**: expand-topic
 - **Notes**: Buddhist research exists in research/buddhist-perspectives-meaning-2026-01-06.md. Synthesize Eastern approaches to consciousness.
@@ -80,6 +68,30 @@ Vetoed items are moved automatically to the Vetoed Tasks section on the next `/e
 - **Generated**: 2026-01-08
 
 ## Completed Tasks
+
+### ✓ 2026-01-08: Create personal identity topic
+- **Type**: expand-topic
+- **Notes**: Supports No Many Worlds tenet. What makes you *you* across time? How does consciousness relate to identity?
+- **Result**: Created ~2200 word article covering psychological, biological, narrative views; Parfit's challenge; and site's consciousness-based view of identity
+- **Output**: `topics/personal-identity.md`
+
+### ✓ 2026-01-08: Run pessimistic review
+- **Type**: pessimistic-review
+- **Notes**: Synthetic maintenance task (3 days overdue)
+- **Result**: Identified 4 medium issues (retrocausality vague, functionalism not engaged, "fundamental" equivocation, combination problem dismissed too fast) plus 3 lower priority issues
+- **Output**: `workflow/reviews/pessimistic-2026-01-08.md`
+
+### ✓ 2026-01-08: Research quantum consciousness mechanisms
+- **Type**: research-topic
+- **Notes**: Support Minimal Quantum Interaction tenet. Cover measurement problem, decoherence objection, Penrose-Hameroff.
+- **Result**: Comprehensive research on Orch OR, Stapp's Quantum Zeno, decoherence objection, 2024-2025 experimental updates, and tenet alignment analysis
+- **Output**: `research/quantum-consciousness-mechanisms-2026-01-08.md`
+
+### ✓ 2026-01-08: Research epiphenomenalism
+- **Type**: research-topic
+- **Notes**: Key alternative to bidirectional interaction. Needs dedicated coverage to strengthen site's position.
+- **Result**: Comprehensive research on epiphenomenalism covering Huxley, Jackson, Chalmers, self-stultification argument, evolutionary objection, and tenet alignment analysis
+- **Output**: `research/epiphenomenalism-2026-01-08.md`
 
 ### ✓ 2026-01-08: Research major theories of the meaning of life
 - **Type**: research-topic

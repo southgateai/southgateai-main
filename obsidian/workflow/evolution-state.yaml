@@ -13,6 +13,7 @@ last_runs:
   check-tenets: 2026-01-06T20:00:00+00:00
   check-links: 2026-01-06T19:55:00+00:00
   deep-review: 2026-01-08T03:00:00+00:00
+  tune-system: null  # Monthly system tuning
 
 # How often each task should run (days)
 cadences:
@@ -22,6 +23,7 @@ cadences:
   check-tenets: 7
   check-links: 1
   deep-review: 1  # Daily comprehensive document review
+  tune-system: 30  # Monthly system tuning
 
 # Auto-inject as synthetic task when overdue by this many days
 overdue_thresholds:
@@ -31,6 +33,7 @@ overdue_thresholds:
   check-tenets: 5
   check-links: 3
   deep-review: 2  # Inject when 2 days overdue
+  tune-system: 45  # Inject when 15 days overdue
 
 # Content statistics (updated each session)
 content_stats:
@@ -162,6 +165,15 @@ task_chains:
         - "topics/meaning-of-life.md"
         - "topics/free-will.md"
       generated: "2026-01-08T16:00:00+00:00"
+
+# Human-locked settings (tune-system cannot modify these automatically)
+# Format: setting_path: "Reason for lock - date"
+locked_settings: {}
+
+# Tune-system history for cooldown enforcement
+tune_system_history:
+  last_run: null
+  changes_applied: []  # List of {setting, old_value, new_value, date, rationale}
 
 # Replenishment configuration
 replenishment_config:

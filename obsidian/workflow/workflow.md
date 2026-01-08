@@ -38,6 +38,7 @@ Skills are invoked via the Claude CLI using stream-json format, which allows pro
 |-------|---------|-------------------|
 | `/evolve [mode]` | Main orchestrator—selects and executes tasks based on priority and staleness | Yes (runs other skills) |
 | `/replenish-queue [mode]` | Auto-generate tasks when queue is empty or near-empty | Yes (todo.md only) |
+| `/tune-system` | Monthly meta-review—analyze system operation, adjust cadences/thresholds | Yes (state, minor) |
 
 ### Content Creation
 
@@ -103,6 +104,37 @@ When a new article is written, `/replenish-queue` generates `cross-review` tasks
 - Check for arguments that the new content supports or challenges
 - Ensure consistent terminology
 - Identify missing cross-references
+
+## System Tuning
+
+The `/tune-system` skill provides meta-level self-improvement for the automation system. It runs monthly (30-day cadence, injected when 45 days overdue).
+
+### What It Analyzes
+
+1. **Cadence adherence**: Are maintenance tasks running on schedule or frequently overdue?
+2. **Failure patterns**: What's causing systematic task failures?
+3. **Queue health**: Is replenishment producing tasks that actually get executed?
+4. **Review findings**: Are identified issues being addressed?
+5. **Convergence progress**: Is the system making progress toward goals?
+
+### Change Tiers
+
+| Tier | Scope | Approval |
+|------|-------|----------|
+| **Tier 1** | Cadence ±2 days, threshold ±2 days | Automatic (max 3/session) |
+| **Tier 2** | New P3 tasks, larger changes | Recommendation only |
+| **Tier 3** | Skill changes, tenet-related | Report only |
+
+### Safeguards
+
+- **Evidence threshold**: Requires 5+ data points before making changes
+- **Change cooldown**: Settings can't change twice within 60 days
+- **Locked settings**: Human can lock any setting via `locked_settings` in state
+- **Abort conditions**: Stops if >50% failure rate or convergence regresses
+
+### Output
+
+Creates report at `workflow/reviews/system-tune-YYYY-MM-DD.md` documenting findings, changes applied, and recommendations.
 
 ## Running Workflows
 

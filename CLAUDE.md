@@ -150,6 +150,7 @@ The project includes scheduled AI automation for content development. All AI-gen
 | `/deep-review [file]` | Comprehensive single-document review with improvements | Yes (modifies content) |
 | `/evolve [mode]` | Main orchestrator: selects and executes tasks based on priority/staleness | Depends on tasks |
 | `/replenish-queue [mode]` | Auto-generate tasks when queue is empty (chains, gaps, research) | Yes (todo.md only) |
+| `/tune-system` | Monthly meta-review: analyze system operation, adjust cadences/thresholds | Yes (state, minor) |
 | `/add-highlight` | Add item to highlights page (max 1/day) | Yes (highlights.md) |
 
 ### Task Queue

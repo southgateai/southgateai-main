@@ -2,16 +2,16 @@
 # Machine-readable tracking for the automatic site evolution system
 # Updated by /evolve skill after each session
 
-last_updated: 2026-01-09T11:00:00+00:00
-session_count: 11
+last_updated: 2026-01-09T14:30:00+00:00
+session_count: 12
 
 # Last run timestamps for maintenance tasks
 last_runs:
-  validate-all: 2026-01-09T10:00:00+00:00  # Updated session 11
+  validate-all: 2026-01-09T10:00:00+00:00
   pessimistic-review: 2026-01-08T15:00:00+00:00
-  optimistic-review: 2026-01-09T10:00:00+00:00  # Updated session 11
+  optimistic-review: 2026-01-09T10:00:00+00:00
   check-tenets: 2026-01-06T20:00:00+00:00
-  check-links: 2026-01-09T10:00:00+00:00  # Updated session 11
+  check-links: 2026-01-09T10:00:00+00:00
   deep-review: 2026-01-08T03:00:00+00:00
   tune-system: 2026-01-08T17:00:00+00:00
 
@@ -37,8 +37,8 @@ overdue_thresholds:
 
 # Content statistics (updated each session)
 content_stats:
-  total_files: 43  # +2 (IIT concept, Eastern philosophy topic)
-  published_files: 34  # +2
+  total_files: 46  # +3 (epiphenomenalism, quantum-consciousness, functionalism)
+  published_files: 37  # +3
   draft_files: 0
   placeholder_files: 0
 
@@ -52,18 +52,18 @@ convergence_targets:
 
 # Current progress toward convergence
 progress:
-  topics_written: 6  # +eastern-philosophy-consciousness
-  concepts_written: 9  # +integrated-information-theory
+  topics_written: 6
+  concepts_written: 12  # +epiphenomenalism, quantum-consciousness, functionalism
   arguments_written: 1
   questions_written: 1
   research_notes: 11
-  reviews_completed: 10  # +optimistic-2026-01-09
+  reviews_completed: 10
 
 # Quality metrics (from last validation)
 quality:
   critical_issues: 0
   medium_issues: 4
-  low_issues: 1  # highlights.md timestamp warning
+  low_issues: 1
 
 # Failed task tracking (title -> retry_count)
 # After 3 failures, task moves to Blocked section
@@ -71,6 +71,26 @@ failed_tasks: {}
 
 # Recent task history for learning
 recent_tasks:
+  - task: expand-topic (epiphenomenalism)
+    date: 2026-01-09
+    result: success
+    session: 12
+  - task: expand-topic (quantum-consciousness)
+    date: 2026-01-09
+    result: success
+    session: 12
+  - task: expand-topic (functionalism)
+    date: 2026-01-09
+    result: success
+    session: 12
+  - task: cross-review (meaning-of-life)
+    date: 2026-01-09
+    result: success
+    session: 12
+  - task: cross-review (panpsychism)
+    date: 2026-01-09
+    result: success
+    session: 12
   - task: optimistic-review
     date: 2026-01-09
     result: success
@@ -107,70 +127,57 @@ recent_tasks:
     date: 2026-01-08
     result: success
     session: 10
-  - task: refine-draft (Further Reading)
-    date: 2026-01-08
-    result: success
-    session: 9
-  - task: deep-review (tenets.md)
-    date: 2026-01-08
-    result: success
-    session: 9
-  - task: content-coverage-analysis
-    date: 2026-01-08
-    result: success
-    session: 9
-  - task: expand-topic (ai-consciousness)
-    date: 2026-01-08
-    result: success
-    session: 9
-  - task: expand-topic (idealism)
-    date: 2026-01-08
-    result: success
-    session: 9
-  - task: expand-topic (panpsychism)
-    date: 2026-01-08
-    result: success
-    session: 9
 
 # Queue status
 queue_status:
   p0_tasks: 0
   p1_tasks: 0
-  p2_tasks: 1  # functionalism
+  p2_tasks: 0  # All P2 tasks completed
   p3_tasks: 1  # explanatory gap
-  needs_replenishment: true  # Only 1 active task remaining
-  last_replenishment: 2026-01-08T14:00:00+00:00
+  needs_replenishment: true  # No active tasks remaining
+  last_replenishment: 2026-01-09T12:00:00+00:00
   replenishment_source_counts:
-    chain: 0
-    unconsumed_research: 2
-    gap_analysis: 4
+    chain: 4  # 2 from research, 2 cross-reviews
+    unconsumed_research: 0  # Consumed this session
+    gap_analysis: 1  # functionalism
     staleness: 0
 
 # Task chain tracking - maps completed tasks to their successors
 # Used by /replenish-queue to generate follow-up tasks
 task_chains:
   # research-topic completions that need articles written
-  pending_articles:
-    - "research/epiphenomenalism-2026-01-08.md"
-    - "research/quantum-consciousness-mechanisms-2026-01-08.md"
+  pending_articles: []  # Consumed: epiphenomenalism, quantum-consciousness
 
   # expand-topic completions that need cross-review
   pending_cross_reviews:
     - new_article: "topics/personal-identity.md"
       review_targets:
-        - "topics/meaning-of-life.md"
-        - "topics/free-will.md"
+        - "topics/free-will.md"  # meaning-of-life done
       generated: "2026-01-08T16:00:00+00:00"
     - new_article: "concepts/integrated-information-theory.md"
       review_targets:
-        - "concepts/panpsychism.md"
-        - "topics/hard-problem-of-consciousness.md"
+        - "topics/hard-problem-of-consciousness.md"  # panpsychism done
       generated: "2026-01-09T10:00:00+00:00"
     - new_article: "topics/eastern-philosophy-consciousness.md"
       review_targets:
         - "topics/meaning-of-life.md"
         - "concepts/nihilism.md"
       generated: "2026-01-09T10:30:00+00:00"
+    - new_article: "concepts/epiphenomenalism.md"
+      review_targets:
+        - "tenets/tenets.md"
+        - "topics/hard-problem-of-consciousness.md"
+      generated: "2026-01-09T12:00:00+00:00"
+    - new_article: "concepts/quantum-consciousness.md"
+      review_targets:
+        - "concepts/retrocausality.md"
+        - "tenets/tenets.md"
+      generated: "2026-01-09T12:30:00+00:00"
+    - new_article: "concepts/functionalism.md"
+      review_targets:
+        - "topics/ai-consciousness.md"
+        - "concepts/qualia.md"
+      generated: "2026-01-09T13:00:00+00:00"
 
 # Human-locked settings (tune-system cannot modify these automatically)
 # Format: setting_path: "Reason for lock - date"

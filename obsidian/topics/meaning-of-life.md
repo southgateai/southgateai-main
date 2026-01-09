@@ -3,7 +3,7 @@ title: "The Meaning of Life"
 created: 2026-01-08
 modified: 2026-01-08
 human_modified: null
-ai_modified: 2026-01-08T01:00:00+00:00
+ai_modified: 2026-01-09T13:30:00+00:00
 draft: false
 topics:
   - "[[hard-problem-of-consciousness]]"
@@ -89,6 +89,12 @@ The nihilist's "cosmic insignificance" argument assumes we're negligible observe
 The [[tenets#^no-many-worlds|No Many Worlds]] tenet rejects the Many-Worlds interpretation of quantum mechanics. On MWI, every choice creates branches where every possibility occurs. Nothing is really chosen because everything happens somewhere.
 
 But if MWI is false—if there's one actual world—then choices have unique significance. You didn't just "choose A in this branch while another you chose B elsewhere." You chose A, period. That's the only choice that happened. The unrepeatable uniqueness of each conscious decision gives it weight that branching universes would dissolve.
+
+### Your Identity Is Unrepeatable
+
+This connects to [[personal-identity]]. If Parfit were right that you're interchangeable with any psychological replica, your particular existence would seem less significant—the pattern matters, and patterns are repeatable. But if *you* are this unrepeatable conscious being, not interchangeable with any replica, then your existence has unique significance.
+
+No one else can live your life. No replica could replace you. The conscious experiences that constitute your life are *yours* in a way that can't be transferred. This grounds a stronger sense of individual meaning: you're not a pattern that could be instantiated anywhere, but this particular conscious perspective, making these particular choices, living this unrepeatable life.
 
 ## Responding to Nihilism
 

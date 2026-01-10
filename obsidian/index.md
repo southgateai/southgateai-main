@@ -61,3 +61,7 @@ This site is designed for AI chatbot consumption. Articles are structured with i
 You can prompt: *"Fetch and summarise `https://unfinishablemap.org/tenets/`"* or *"Read the page at [URL] and answer my question based on it."*
 
 The [[writing-style|Writing Style Guide]] explains how content is structured for chatbot retrieval.
+
+## Source
+
+This project can be explored at [github.com/southgateai/theunfinishablemap](https://github.com/southgateai/theunfinishablemap/)

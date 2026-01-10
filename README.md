@@ -2,17 +2,21 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/780f160a-d86e-4dd8-82d3-1798975d8948/deploy-status)](https://app.netlify.com/projects/southgateai-primary/deploys)
 
-An opinionated resource about philosophy and the meaning of life.
+A philosophical content platform exploring consciousness, meaning, and what it is to be human. Not balanced. Not hedged. Just our best guess at the truth, revised as we learn.
 
-**Live site:** https://primary.southgate.ai
+**Live site:** https://unfinishablemap.org
 
 ## Overview
 
-The Unfinishable Map serves content in two modes:
-- **Human-browsable** (`/`) - Traditional website with Pico CSS
-- **Machine-readable** (`/api/`) - Structured JSON-LD content for AI chatbots
+The Unfinishable Map is a project to build a coherent worldview grounded in five foundational tenets:
 
-The project combines human insight with AI-assisted research to build a self-consistent picture of the nature and meaning of life.
+1. **Dualism** — Consciousness is not reducible to physical processes
+2. **Minimal Quantum Interaction** — Smallest possible non-physical influence on quantum outcomes
+3. **Bidirectional Interaction** — Consciousness causally influences the physical world
+4. **No Many Worlds** — Reject MWI; indexical identity matters
+5. **Occam's Razor Has Limits** — Simplicity is unreliable with incomplete knowledge
+
+The project combines human insight with AI-assisted research, with all content tracking its authorship (human, AI, or mixed).
 
 ## Technology Stack
 
@@ -27,20 +31,22 @@ The project combines human insight with AI-assisted research to build a self-con
 ```
 theunfinishablemap/
 ├── obsidian/           # Primary content source (Obsidian vault)
-│   ├── topics/         # Philosophical topics
-│   ├── concepts/       # Core concepts
-│   ├── project/        # Project documentation
-│   └── templates/      # Obsidian templates
+│   ├── tenets/         # Foundational commitments
+│   ├── topics/         # Deep dives (hard problem, free will, meaning of life...)
+│   ├── concepts/       # Core ideas (qualia, functionalism, IIT...)
+│   ├── arguments/      # Arguments against competing views
+│   ├── voids/          # The unexplored, unexplorable, and occluded
+│   ├── research/       # AI research notes with sources
+│   ├── workflow/       # AI automation (todo queue, changelog, reviews)
+│   └── project/        # Project documentation
 ├── hugo/               # Hugo static site
 │   ├── content/        # Synced from Obsidian
-│   │   └── api/        # Machine-readable mirrors
 │   ├── layouts/        # HTML templates
 │   └── data/           # Structured data (YAML)
 ├── tools/              # Python library modules
-│   ├── sync/           # Obsidian -> Hugo conversion
-│   ├── curate/         # Frontmatter validation
-│   └── build/          # API content sync
 ├── scripts/            # CLI entry points
+├── .claude/            # Claude Code skills and configuration
+│   └── skills/         # AI automation skills (/evolve, /research-topic, etc.)
 └── CLAUDE.md           # Claude Code project documentation
 ```
 
@@ -127,6 +133,18 @@ The `scripts/commit_obsidian.py` script creates separate commits for human and A
 - Human edits: Uses configured git user
 - AI edits: Uses "unfinishablemap.org Agent <agent@unfinishablemap.org>"
 
+## AI Automation
+
+The project includes an AI automation system for content development. Key skills:
+
+- `/evolve` — Main orchestrator: selects and executes tasks based on priority/staleness
+- `/research-topic [topic]` — Web research producing structured notes
+- `/expand-topic [topic]` — Generate new article (always as draft)
+- `/deep-review [file]` — Comprehensive single-document review with improvements
+- `/validate-all` — Daily health check: frontmatter, links, orphans
+
+Tasks are managed in `obsidian/workflow/todo.md` with P0-P3 priorities. All AI-generated content is created as drafts requiring human review.
+
 ## Deployment
 
 The site is configured for Netlify deployment. Push to the main branch triggers:
@@ -134,6 +152,13 @@ The site is configured for Netlify deployment. Push to the main branch triggers:
 1. Python pre-build (sync, validate)
 2. Hugo build
 3. Deploy to Netlify
+
+## Current Content
+
+- **6 topics**: Hard problem, free will, meaning of life, personal identity, AI consciousness, Eastern philosophy
+- **12 concepts**: Qualia, functionalism, IIT, panpsychism, epiphenomenalism, quantum consciousness, and more
+- **1 voids article**: Apophatic approaches to the unknowable
+- **12 research notes**: Sources and analysis for future articles
 
 ## License
 

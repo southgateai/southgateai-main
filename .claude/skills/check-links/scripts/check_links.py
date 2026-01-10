@@ -118,19 +118,31 @@ def crawl(start_url: str) -> dict[str, list[tuple[str, int | str]]]:
     return broken
 
 
+def find_hugo_server() -> str | None:
+    """Try common Hugo ports to find running server."""
+    ports = [1313] + list(range(60420, 60440))  # Default + common dynamic range
+    for port in ports:
+        url = f"http://localhost:{port}/"
+        try:
+            with urlopen(url, timeout=2) as response:
+                if response.status == 200:
+                    return url
+        except (HTTPError, URLError):
+            continue
+    return None
+
+
 def main() -> int:
     """Main entry point."""
-    start_url = "http://localhost:1313/"
+    start_url = find_hugo_server()
+
+    if not start_url:
+        print("Error: Cannot find Hugo server on common ports")
+        print("Make sure Hugo server is running: cd hugo && hugo server")
+        return 1
 
     print(f"Checking links starting from {start_url}")
     print("-" * 50)
-
-    # Check if server is running
-    ok, status = check_url(start_url)
-    if not ok:
-        print(f"Error: Cannot connect to {start_url}")
-        print("Make sure Hugo server is running: cd hugo && hugo server")
-        return 1
 
     broken = crawl(start_url)
 

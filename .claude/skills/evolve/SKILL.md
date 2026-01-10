@@ -195,9 +195,40 @@ uv run python scripts/highlights.py add "Title" "Description (max 280 chars)" --
 
 The manager enforces max 1 highlight per day—if already added, it will silently skip.
 
-### 10. Final Session Commit
+### 10. Sync and Validate Site
 
-After all tasks complete, commit session-level updates (state file, changelog, todo updates):
+Before the final commit, sync content to Hugo and verify no broken links:
+
+```bash
+# Sync Obsidian → Hugo
+uv run python scripts/sync.py
+
+# Build site (validates templates and content)
+cd hugo && hugo --gc --minify
+
+# Start server and check links
+hugo server &
+sleep 3
+python .claude/skills/check-links/scripts/check_links.py
+```
+
+**If broken links are found:**
+1. Log them to the session report
+2. For each broken link, check if:
+   - The target file exists but has `draft: true` → Fix by setting `draft: false`
+   - The wikilink is malformed → Fix the source file
+   - The target doesn't exist → Note as issue in report
+3. Re-sync after fixes
+4. If links still broken after reasonable attempts, note in session report
+
+This step catches issues like:
+- Articles marked as drafts that are linked from published content
+- Wikilink conversion errors
+- Missing pages
+
+### 11. Final Session Commit
+
+After all tasks complete and site validation passes, commit session-level updates (state file, changelog, todo updates):
 
 ```
 chore(auto): Evolution session [N] complete

@@ -147,6 +147,7 @@ Follow the comprehensive guidance in `obsidian/project/writing-style.md`.
 
 ## Important
 
+- **CRITICAL: ALWAYS set `draft: false`** — Content is published directly. Never use `draft: true`.
 - ALWAYS include `ai_contribution: 100`
 - ALWAYS include current model in `ai_system`
 - ALWAYS update `ai_modified` timestamp

@@ -78,7 +78,7 @@ But the asymmetry is worth investigating. If there are thoughts humans cannot th
 
 ## Why Voids Matter
 
-The unexplored voids invite exploration. The content on this site—the [[topics/topics|topics]], [[concepts/concepts|concepts]], and [[arguments/arguments|arguments]]—represents our attempt to chart what can be charted.
+The unexplored voids invite exploration. The content on this site—the [[topics|topics]], [[concepts|concepts]], and [[arguments|arguments]]—represents our attempt to chart what can be charted.
 
 The unexplorable voids demand humility. They remind us that the Unfinishable Map is unfinishable not merely because we are finite creatures with limited time, but because the territory itself may exceed what any map we can make could represent.
 

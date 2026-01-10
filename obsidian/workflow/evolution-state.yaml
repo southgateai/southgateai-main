@@ -2,8 +2,8 @@
 # Machine-readable tracking for the automatic site evolution system
 # Updated by /evolve skill after each session
 
-last_updated: 2026-01-09T14:30:00+00:00
-session_count: 12
+last_updated: 2026-01-10T16:30:00+00:00
+session_count: 13
 
 # Last run timestamps for maintenance tasks
 last_runs:
@@ -12,7 +12,7 @@ last_runs:
   optimistic-review: 2026-01-09T10:00:00+00:00
   check-tenets: 2026-01-06T20:00:00+00:00
   check-links: 2026-01-09T10:00:00+00:00
-  deep-review: 2026-01-08T03:00:00+00:00
+  deep-review: 2026-01-10T15:30:00+00:00
   tune-system: 2026-01-08T17:00:00+00:00
   research-voids: 2026-01-10T12:00:00+00:00
 
@@ -40,9 +40,9 @@ overdue_thresholds:
 
 # Content statistics (updated each session)
 content_stats:
-  total_files: 46  # +3 (epiphenomenalism, quantum-consciousness, functionalism)
-  published_files: 37  # +3
-  draft_files: 0
+  total_files: 48  # +1 apophatic-approaches (voids), +1 research notes
+  published_files: 37
+  draft_files: 1  # apophatic-approaches
   placeholder_files: 0
 
 # Convergence targets - what "done" looks like
@@ -56,11 +56,12 @@ convergence_targets:
 # Current progress toward convergence
 progress:
   topics_written: 6
-  concepts_written: 12  # +epiphenomenalism, quantum-consciousness, functionalism
+  concepts_written: 12
   arguments_written: 1
   questions_written: 1
-  research_notes: 11
-  reviews_completed: 10
+  voids_written: 1  # +apophatic-approaches
+  research_notes: 12  # +purpose-of-life-ai-alignment
+  reviews_completed: 11  # +deep-review-hard-problem
 
 # Quality metrics (from last validation)
 quality:
@@ -74,6 +75,18 @@ failed_tasks: {}
 
 # Recent task history for learning
 recent_tasks:
+  - task: expand-topic (apophatic-approaches)
+    date: 2026-01-10
+    result: success
+    session: 13
+  - task: deep-review (hard-problem-of-consciousness)
+    date: 2026-01-10
+    result: success
+    session: 13
+  - task: research-topic (purpose-of-life-ai-alignment)
+    date: 2026-01-10
+    result: success
+    session: 13
   - task: expand-topic (epiphenomenalism)
     date: 2026-01-09
     result: success
@@ -114,35 +127,19 @@ recent_tasks:
     date: 2026-01-09
     result: success
     session: 11
-  - task: expand-topic (personal-identity)
-    date: 2026-01-08
-    result: success
-    session: 10
-  - task: pessimistic-review
-    date: 2026-01-08
-    result: success
-    session: 10
-  - task: research-topic (quantum-consciousness-mechanisms)
-    date: 2026-01-08
-    result: success
-    session: 10
-  - task: research-topic (epiphenomenalism)
-    date: 2026-01-08
-    result: success
-    session: 10
 
 # Queue status
 queue_status:
   p0_tasks: 0
   p1_tasks: 0
   p2_tasks: 0  # All P2 tasks completed
-  p3_tasks: 1  # explanatory gap
+  p3_tasks: 1  # explanatory gap only
   needs_replenishment: true  # No active tasks remaining
   last_replenishment: 2026-01-09T12:00:00+00:00
   replenishment_source_counts:
-    chain: 4  # 2 from research, 2 cross-reviews
-    unconsumed_research: 0  # Consumed this session
-    gap_analysis: 1  # functionalism
+    chain: 5  # +1 from research (purpose-of-life)
+    unconsumed_research: 1  # purpose-of-life-ai-alignment
+    gap_analysis: 0
     staleness: 0
 
 # Task chain tracking - maps completed tasks to their successors
@@ -150,7 +147,8 @@ queue_status:
 task_chains:
   # research-topic completions that need articles written
   pending_articles:
-    - "research/voids-apophatic-approaches-2026-01-10.md"
+    - "research/purpose-of-life-ai-alignment-2026-01-10.md"
+    # voids-apophatic-approaches consumed -> apophatic-approaches.md written
 
   # expand-topic completions that need cross-review
   pending_cross_reviews:
@@ -182,6 +180,11 @@ task_chains:
         - "topics/ai-consciousness.md"
         - "concepts/qualia.md"
       generated: "2026-01-09T13:00:00+00:00"
+    - new_article: "voids/apophatic-approaches.md"
+      review_targets:
+        - "voids/voids.md"
+        - "topics/hard-problem-of-consciousness.md"
+      generated: "2026-01-10T15:00:00+00:00"
 
 # Human-locked settings (tune-system cannot modify these automatically)
 # Format: setting_path: "Reason for lock - date"
